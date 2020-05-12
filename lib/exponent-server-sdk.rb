@@ -149,7 +149,7 @@ module Exponent
       private
 
       def sort_results
-        data = body&.fetch('data', nil) || nil
+        data = body ? body.fetch('data', nil) : nil
 
         # something is definitely wrong
         return if data.nil?
